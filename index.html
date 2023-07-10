@@ -1,0 +1,77 @@
+<!--
+Texas Holdem Poker
+Copyright 2020 John McKeon
+All Rights Reserved
+-->
+
+<!DOCTYPE html>
+<head>
+<title>Ugly Poker</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="poker.css">
+</head>
+<body class="container-fluid">
+  <nav class="navbar navbar-dark bg-dark"><h4>Ugly Poker</h4></nav>
+  <div class="row">
+   <div id="holdem" class="col-sm-12 col-md-12 col-lg-8">
+    <div id="deck" class="row">
+     <div id="flop1" class="col-sm"><img src="cards/blank.png" class="card"/></div>
+     <div id="flop2" class="col-sm"><img src="cards/blank.png" class="card"/></div>
+     <div id="flop3" class="col-sm"><img src="cards/blank.png" class="card"/></div>
+     <div id="turn"  class="col-sm"><img src="cards/blank.png" class="card"/></div>
+     <div id="river" class="col-sm"><img src="cards/blank.png" class="card"/></div>
+    </div> <!-- Deck row -->
+    <div class="row" style="margin-top:5px">
+      <button id="deal" class="btn btn-primary col-sm-2 offset-5">Deal</button>
+    </div> <!-- Deal row -->
+    <div id="hand" class="row">
+     <div id="me1" class="col-sm offset-1"><img src="cards/blank.png" class="card"/></div>
+     <div id="me2" class="col-sm"><img src="cards/blank.png" class="card"/></div>
+     <div class="col-sm-2 offset-1">
+      <div id="status" class="row"><strong>Hold em</strong></div>
+     </div>
+     <div id="ctrls" class="col-sm-2">
+      <div class="row"><button id="btncall" class="btn btn-primary col-sm">Call</button></div>
+      <div class="row"><button id="btnraise" class="btn btn-success col-sm">Raise</button></div>
+      <div class="row"><button id="btncheck" class="btn btn-warning col-sm">Check</button></div>
+      <div class="row"><button id="btnfold" class="btn btn-danger col-sm">Fold</button></div>
+     </div>
+    </div> <!-- Hand  row-->
+    <div id="pot" class="row"><h2 class="offset-2">Current Pot $0</h2></div>
+    <div id="seats" class="row" style="height:5em">
+     <div id="seat1" class="seat col-sm">Seat 1</div>
+     <div id="seat2" class="seat col-sm">Seat 2</div>
+     <div id="seat3" class="seat col-sm">Seat 3</div>
+     <div id="seat4" class="seat col-sm">Seat 4</div>
+     <div id="seat5" class="seat col-sm">Seat 5</div>
+     <div id="seat6" class="seat col-sm">Seat 6</div>
+     <div id="seat7" class="seat col-sm">Seat 7</div>
+     <div id="seat8" class="seat col-sm">Seat 8</div>
+     <div id="seat9" class="seat col-sm">Seat 9</div>
+    </div>
+   </div> <!-- Poker Table column -->
+   <div id="chat" class="col-lg-4">
+     <iframe id="vdo"
+            allow="autoplay;camera;microphone;"
+            src="https://vdo.ninja/?room=uglypoker1&transparent"
+            style="height:100%">
+     </iframe>
+   </div>
+  </div> <!-- main row -->
+
+  <div class="row">
+    <div class="col-sm-8 col-lg-8">
+      <div id="caveat" class="center-text" style="margi-top:1em">
+       <h5>For entertainment purposes ONLY. No warranty expressed or implied</h5>
+      </div>
+      <div id="legal" class="row">
+       <h6>Copyright 2020 John McKeon. All rights reserved.</h6>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+      <div id="qr"></div>
+    </div>
+  </div>
+  <div id="debug" class="row"></div>
+</body>

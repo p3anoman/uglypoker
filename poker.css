@@ -1,0 +1,16 @@
+body { background-color:#11aa11 }
+nav { color:white }
+@media only screen and (max-width:600px) {
+	img.card {width:30px;height:45px}
+}
+@media only screen not (max-width:600px) {
+	img.card {width:40px;height:60px }
+}
+#holdem { margin-top:1em;border-right:1px solid slategray }
+//#deal { margin-left:220px;width:100px;height:50px;display:inline }
+//span.seat { width:62px;margin:5px }
+#seats { margin-top:10px; height:5em }
+#hand,#pot,#seats { border-top: solid 1px slategray; margin-top:1em }
+#participants,#msgs { border:1px solid slategray; overflow-y:scroll }
+#participants { height:7em }
+#msgs { height:18em }
