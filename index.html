@@ -9,9 +9,22 @@ All Rights Reserved
 <title>Ugly Poker</title>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="poker.css">
+<!-- link rel="stylesheet" href="poker.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://unpkg.com/@croquet/croquet"></script>
+<script src="https://unpkg.com/page-synchronizer@1.0.6"></script>
+<script type="text/javascript">
+  if (window.location.search !== "") {
+    console.log("starting SimplePageView");
+      SimplePageView.start({
+          apiKey: "1m5nMszAACuG8f9ADpq6F25PrIb5LhyHlx6rjDHbd",
+      })
+  } else {
+    console.log("No go")
+  }
+</script -->
 </head>
-<body class="container-fluid" onload="checkGreenlight()">
+<body class="container-fluid">
   <nav class="navbar navbar-dark bg-dark"><h4>Ugly Poker</h4></nav>
   <div class="row">
    <div id="holdem" class="col-sm-12 col-md-12 col-lg-8">
@@ -74,14 +87,5 @@ All Rights Reserved
     </div>
   </div>
   <div id="debug" class="row"></div>
-  <script>
-    function checkGreenlight() {
-      if (window.fromLandingPage) {
-        const vdo=document.getElementById("vdo");
-        vdo.remove();
-      } else {
-        vdo.src = "https://vdo.ninja/?room=uglypoker"+window.location.search["q"]+"&transparent"
-      }
-    }
-  </script>
+  <!-- script type="text/javascript" src="poker.js"></script -->
 </body>

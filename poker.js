@@ -3,6 +3,7 @@
 // All Rights Reserved
 import * as Croquet from '@croquet/croquet';
 import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'page-synchronizer';
 
 function cardClass() { return " class=\"card\"" }
 
@@ -215,7 +216,7 @@ class PokerTable extends Croquet.View {
     };
     qr.appendChild(qrCode);
 
-    vdo.src="https://vdo.ninja/?room=uglypoker" + window.location.search["q"] + "&transparent";
+    //vdo.src="https://vdo.ninja/?room=uglypoker" + window.location.search["q"] + "&transparent";
   }
 
   playerName(dflt) {
@@ -305,8 +306,8 @@ class PokerTable extends Croquet.View {
   }
 }
 
-//const apiKey = "1m5nMszAACuG8f9ADpq6F25PrIb5LhyHlx6rjDHbd";
-const apiKey = "1fe9JcnxEtqebmrahC10k5JnoeahGpNs4sKFmGbxl"; //production key
+const apiKey = "1m5nMszAACuG8f9ADpq6F25PrIb5LhyHlx6rjDHbd";
+//const apiKey = "1fe9JcnxEtqebmrahC10k5JnoeahGpNs4sKFmGbxl"; //production key
 const appId = "com.uglypoker";
 const name = Croquet.App.autoSession();
 const password = "acesandeights888"; //Croquet.App.autoPassword();
