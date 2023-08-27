@@ -306,8 +306,8 @@ class PokerTable extends Croquet.View {
   }
 }
 
-const apiKey = "1m5nMszAACuG8f9ADpq6F25PrIb5LhyHlx6rjDHbd";
-//const apiKey = "1fe9JcnxEtqebmrahC10k5JnoeahGpNs4sKFmGbxl"; //production key
+import apiKey from "./apiKey.js";
+
 const appId = "com.uglypoker";
 const name = Croquet.App.autoSession();
 const password = "acesandeights888"; //Croquet.App.autoPassword();
