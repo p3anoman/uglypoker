@@ -216,7 +216,15 @@ class PokerTable extends Croquet.View {
     };
     qr.appendChild(qrCode);
 
-    //vdo.src="https://vdo.ninja/?room=uglypoker" + window.location.search["q"] + "&transparent";
+    if (chat.childElementCount > 0) { vdo.remove() }
+    let q = new URLSearchParams(document.location.search).get("q");
+    console.log("URL q: "+q);
+    let iframe = document.createElement('iframe');
+    iframe.id="vdo";
+    iframe.allow="autoplay;camera;microphone;"
+    iframe.src="https://vdo.ninja/?room=uglypoker_"+q+"&transparent"
+    iframe.style="height:100%;width:100%";
+    chat.appendChild(iframe);
   }
 
   playerName(dflt) {
@@ -306,8 +314,8 @@ class PokerTable extends Croquet.View {
   }
 }
 
-import apiKey from "./apiKey.js";
-
+const apiKey = "1m5nMszAACuG8f9ADpq6F25PrIb5LhyHlx6rjDHbd";
+//const apiKey = "1fe9JcnxEtqebmrahC10k5JnoeahGpNs4sKFmGbxl"; //production key
 const appId = "com.uglypoker";
 const name = Croquet.App.autoSession();
 const password = "acesandeights888"; //Croquet.App.autoPassword();
