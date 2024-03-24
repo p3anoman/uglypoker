@@ -3,9 +3,10 @@ const CopyPlugin = require('copy-webpack-plugin');
 var path = require('path');
 
 module.exports = {
-    entry : './poker.js',
+    entry : './index.js',
     output: {
-        path: '/Users/johnny/Documents/GitHub/p3anoman.github.io/poker', //path.join(__dirname, 'dist'),
+        //path: '/Users/johnny/Documents/GitHub/p3anoman.github.io/poker',
+        path: path.join(__dirname, 'dist'),
         filename: '[name]-[contenthash:8].js',
         chunkFilename: 'chunk-[name]-[contenthash:8].js',
     },
@@ -46,8 +47,7 @@ module.exports = {
         }),
         new CopyPlugin({
             patterns: [
-                { from: 'cards', to: 'cards', noErrorOnMissing: false },
-                {from: 'poker.css', to: 'poker.css'}
+                { from: 'cards', to: 'cards', noErrorOnMissing: false }
             ]
         }),
     ]
